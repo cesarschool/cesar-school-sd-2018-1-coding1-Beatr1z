@@ -11,19 +11,22 @@ void fizzBizz(int start, int end)
 {
     printf("\nFizzBizz::START: %d, %d\n", start, end);
     
-    // TODO: Your code here!
-    // Ex.: printf("Fizz\n");
-    
+    int numero;
+    for (numero = start; numero < end; numero = numero + 1)
+    {
+        if (numero % 3 == 0 && numero % 5 == 0) {
+            printf ("FizzBuzz\n");  
+        }
+        else if (numero % 3 == 0) {
+                printf ("Fizz\n");
+        }
+        else if (numero % 5 == 0) {
+            printf ("Buzz\n");
+            
+        }
+        else {
+            printf ("%d\n", numero);
+        }
+    }
     printf("\nFizzBizz::END\n");
-}
-
-int main()
-{
-    printf("\n### CESAR School :: Sistemas Digitais :: Coding1 :: FizzBizz ###\n");
-    
-    fizzBizz(1, 6);
-    fizzBizz(1, 16);
-    fizzBizz(1, 100);
-    
-    return 0;
 }
