@@ -16,6 +16,21 @@ bool isPalindrome (char sentence[], int length) {
 
     // TODO: YOUR CODE HERE!
     
+    int nome1 = 0;
+    int nome2 = length -1;
+    
+    while (sentence [nome1] == sentence [nome2]) {
+        if (nome1 == nome2 || nome1 > nome2) {
+            printf ("true");
+            printf("\nisPalindrome::END\n");
+            return true;
+        }
+        
+        nome1 = nome1 + 1;
+        nome2 = nome2 - 1; 
+    }
+    printf("false");
+    
     printf("\nisPalindrome::END\n");
     return false;
 }
