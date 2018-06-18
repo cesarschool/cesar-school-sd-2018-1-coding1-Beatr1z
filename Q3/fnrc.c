@@ -21,7 +21,11 @@ char firstNonRepeatingChar (char sentence[], int length)
     while (letra <= final) {
         variavel = 0;
         while (variavel<= final){
-            if (sentence[variavel] == sentence[letra] && variavel != letra) {
+            if(sentence[letra] == ' '){
+                simbolo = 0;
+                break;
+            }
+            else if (sentence[variavel] == sentence[letra] && variavel != letra) {
                 simbolo = 0;
                 break; 
             }
@@ -49,6 +53,6 @@ int main()
     firstNonRepeatingChar("cesar school", 12);
     firstNonRepeatingChar("sistemas digitais", 17);
     firstNonRepeatingChar("arara", 5);
-    
+    firstNonRepeatingChar("ovo ovelha", 10);
     return 0;
 }
